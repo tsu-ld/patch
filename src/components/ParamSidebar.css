@@ -1,49 +1,33 @@
 .param-sidebar {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
-  position: sticky;
-  top: calc(var(--nav-h) + var(--space-4));
-  max-height: calc(100vh - var(--nav-h) - var(--space-8));
-  overflow-y: auto;
-}
-
-.param-sidebar-inner {
-  padding: var(--space-3);
-}
-
-.param-section {
-  margin-bottom: var(--space-4);
-}
-
-.param-section:last-child {
-  margin-bottom: 0;
+    align-self: start;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    position: sticky;
+    top: calc(var(--nav-h) + var(--space-4));
+    max-height: calc(100vh - var(--nav-h) - var(--space-8));
+    overflow-y: auto;
+    padding: var(--space-4);
 }
 
 .param-section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-2);
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-2);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
-.param-section:first-child .param-section-header {
-  padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
 }
 
 .param-row {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 3px var(--space-1);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
 }
 
 .param-row-label {
@@ -55,6 +39,10 @@
   text-overflow: ellipsis;
 }
 
+.param-row.is-modified .param-row-label {
+  color: var(--color-text);
+}
+
 .param-row-value {
   font-size: var(--text-xs);
   font-family: var(--font-mono);
@@ -63,20 +51,6 @@
   text-align: right;
 }
 
-@media (min-width: 900px) {
-  .param-sidebar-inner {
-    column-count: 2;
-    column-gap: var(--space-3);
-  }
-
-  .param-section {
-    break-inside: avoid;
-    margin-bottom: var(--space-3);
-  }
-}
-
-@media (min-width: 1200px) {
-  .param-sidebar-inner {
-    column-count: 3;
-  }
+.param-row.is-modified .param-row-value {
+  color: var(--color-accent);
 }

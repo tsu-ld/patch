@@ -8,24 +8,27 @@ export default function Panel({ synth, values, setValue }) {
   const controlEntries = entries.filter(([k]) => !jackKeys.has(k))
 
   return (
-    <div className="panel-container" style={{ position: 'relative' }}>
-      <img src={synth.panel} alt={synth.name} style={{ width: '100%', pointerEvents: 'none', userSelect: 'none', userDrag: 'none' }} />
-      {controlEntries.map(([key, param]) => (
-        <SynthControl
-          key={key}
-          paramKey={key}
-          param={param}
-          values={values}
-          setValue={setValue}
-        />
-      ))}
-      {synth.modMatrixColumns && (
-        <PatchBay
-          params={synth.params}
-          values={values}
-          setValue={setValue}
-        />
-      )}
+    <div className="panel-container">
+      <div className="panel-inner">
+        <img className="panel-image" src={synth.panel} alt={synth.name} />
+        {controlEntries.map(([key, param]) => (
+          <SynthControl
+            key={key}
+            paramKey={key}
+            param={param}
+            values={values}
+            setValue={setValue}
+          />
+        ))}
+        {/* TODO: This is wrong, not every synth will have a modMatrix, rename microbrute's modMatrix to patchBay or something like that */}
+        {synth.modMatrixColumns && (
+          <PatchBay
+            params={synth.params}
+            values={values}
+            setValue={setValue}
+          />
+        )}
+      </div>
     </div>
   )
 }

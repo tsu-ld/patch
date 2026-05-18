@@ -1,12 +1,19 @@
 *, *::before, *::after { box-sizing: border-box; }
 
-html, body {
-  min-height: 100%;
+html, body, #root {
+  height: 100%;
   background: var(--color-bg);
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 main {
+  flex: 1;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: var(--space-8) var(--space-6);
 }
@@ -26,11 +33,14 @@ section {
 /* ── Editor ──────────────────────── */
 
 .editor-layout {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr 260px;
   gap: var(--space-6);
-  align-items: start;
+  align-items: stretch;
+  min-height: 0;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: var(--space-8) var(--space-6);
 }
@@ -203,8 +213,15 @@ section {
 
 @media (min-width: 1400px) {
   .editor-layout {
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 320px;
     max-width: 1400px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .editor-layout {
+    grid-template-columns: 1fr 360px;
+    max-width: 1700px;
   }
 }
 

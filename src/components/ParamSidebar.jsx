@@ -9,6 +9,23 @@ function groupBySection(params) {
   }, {})
 }
 
+function isModified(param, value) {
+  if (param.type === 'jack') {
+    if (Array.isArray(value))
+      return value.length > 0
+
+    return value !== null
+  }
+
+  if (param.type === 'switch') {
+    const idx = param.options.indexOf(param.default)
+
+    return Math.abs(value - idx / (param.options.length - 1)) > 0.001
+  }
+
+  return Math.abs(value - param.default) > 0.001
+}
+
 function getDisplayValue(param, value, params) {
   if (param.type === 'jack') {
     if (param.direction === 'out' && Array.isArray(value) && value.length > 0)
@@ -30,8 +47,10 @@ function getDisplayValue(param, value, params) {
 }
 
 function ParamRow({ param, value, params }) {
+  const modified = isModified(param, value)
+
   return (
-    <div className="param-row">
+    <div className={`param-row${modified ? ' is-modified' : ''}`}>
       <span className="param-row-label">{param.label}</span>
       <span className="param-row-value">{getDisplayValue(param, value, params)}</span>
     </div>
