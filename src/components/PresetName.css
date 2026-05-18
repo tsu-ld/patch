@@ -1,0 +1,27 @@
+input.preset-name {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  padding: var(--space-2) var(--space-2);
+  width: auto;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+  transition: border-color 15ms, color 15ms;
+}
+
+input.preset-name:hover {
+  border-bottom-color: var(--color-border);
+}
+
+input.preset-name:focus {
+  outline: none;
+  border-bottom-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+input.preset-name::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}

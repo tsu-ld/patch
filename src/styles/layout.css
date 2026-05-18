@@ -1,0 +1,224 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  min-height: 100%;
+  background: var(--color-bg);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+section {
+  margin-bottom: var(--space-12);
+}
+
+/* ── Editor ──────────────────────── */
+
+.editor-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: var(--space-6);
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+.decode-error {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-error);
+}
+
+.editor-layout.theme-loading {
+  visibility: hidden;
+}
+
+.decode-error {
+  background: var(--color-error);
+  color: var(--color-surface);
+  text-align: center;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.nav-home {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.nav-home:hover { color: var(--color-accent); }
+
+.nav-sep {
+  display: block;
+  width: 1px;
+  height: 16px;
+  background: var(--color-border);
+}
+
+.nav-synth {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ── Landing ─────────────────────── */
+
+.landing-hero {
+  padding-bottom: var(--space-8);
+}
+
+.landing-tagline {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  margin: var(--space-2) 0 0;
+}
+
+.how-it-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.how-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.how-step-n {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+.how-step-label {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.how-step-detail {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.section-heading {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-4);
+}
+
+.synth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.synth-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .15s;
+}
+
+.synth-card:hover { border-color: var(--color-accent); }
+
+.synth-card-soon {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.synth-card-soon:hover { border-color: var(--color-border); }
+
+.synth-card-soon-image {
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface-2);
+}
+
+.synth-card-image { width: 100%; display: block; }
+
+.synth-card-body {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.synth-card-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.synth-card-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.synth-card-meta {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+/* ── Responsive ──────────────────── */
+
+@media (min-width: 1400px) {
+  .editor-layout {
+    grid-template-columns: 1fr 400px;
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .editor-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .param-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .how-it-works {
+    grid-template-columns: 1fr;
+  }
+}
