@@ -1,5 +1,5 @@
 ---
-name: synth-preset-maker
+name: patch
 description: Visual synth preset creation and sharing — URL-first, panel-driven, per-synth theming
 colors:
   gallery-wall: "oklch(96% 0.007 80)"
@@ -88,7 +88,7 @@ components:
     height: "36px"
 ---
 
-# Design System: synth-preset-maker
+# Design System: patch
 
 ## 1. Overview
 

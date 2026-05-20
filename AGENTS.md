@@ -1,4 +1,4 @@
-# AGENTS.md — synth-preset-maker
+# AGENTS.md — patch
 
 ## Runtime & toolchain
 - **Bun**, not Node. Install: `bun install`. Scripts: `bun run dev | build | preview | lint`.

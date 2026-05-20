@@ -1,5 +1,5 @@
 {
-  "name": "synth-preset-maker",
+  "name": "patch",
   "type": "module",
   "private": true,
   "scripts": {
