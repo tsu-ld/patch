@@ -6,7 +6,7 @@
     border-radius: 10px;
     position: relative;
     cursor: pointer;
-    transition: border-color 15ms;
+    transition: border-color 150ms;
 }
 
 .switch-track:hover {

@@ -10,7 +10,7 @@
 .footer a {
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: color 15ms;
+  transition: color 150ms;
 }
 
 .footer a:hover {

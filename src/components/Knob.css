@@ -6,7 +6,7 @@
     background: var(--color-surface);
     position: relative;
     cursor: grab;
-    transition: border-color 15ms;
+    transition: border-color 150ms;
 }
 
 .knob-body:hover {

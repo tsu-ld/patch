@@ -20,7 +20,7 @@
   border: 1.5px solid var(--color-border);
   background: var(--color-surface);
   cursor: pointer;
-  transition: border-color 15ms;
+  transition: border-color 150ms;
   touch-action: none;
   transform: translate(-50%, -50%);
   z-index: 2;

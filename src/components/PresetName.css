@@ -8,7 +8,7 @@ input.preset-name {
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   font-family: var(--font-sans);
-  transition: border-color 15ms, color 15ms;
+  transition: border-color 150ms, color 150ms;
 }
 
 input.preset-name:hover {

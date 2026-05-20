@@ -96,11 +96,15 @@ section {
 /* ── Landing ─────────────────────── */
 
 .landing-hero {
-  padding-bottom: var(--space-8);
+  padding: var(--space-12) 0 var(--space-8);
+}
+
+.landing-hero h1 {
+  font-size: 48px;
 }
 
 .landing-tagline {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   color: var(--color-text-muted);
   margin: var(--space-2) 0 0;
 }
@@ -109,9 +113,8 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
-  padding: var(--space-8) 0;
+  padding: var(--space-6) 0;
   border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .how-step {
@@ -121,41 +124,35 @@ section {
 }
 
 .how-step-n {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-family: var(--font-mono);
   color: var(--color-accent);
   letter-spacing: 0.05em;
 }
 
 .how-step-label {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: 600;
   color: var(--color-text);
 }
 
 .how-step-detail {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   margin: 0;
 }
 
-.section-heading {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: var(--space-4);
-}
-
 .synth-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-6);
 }
 
 .synth-card {
   display: block;
+  flex: 0 1 400px;
+  max-width: 480px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -167,43 +164,31 @@ section {
 
 .synth-card:hover { border-color: var(--color-accent); }
 
-.synth-card-soon {
-  cursor: default;
-  opacity: 0.5;
-}
-
-.synth-card-soon:hover { border-color: var(--color-border); }
-
-.synth-card-soon-image {
-  aspect-ratio: 4 / 3;
-  background: var(--color-surface-2);
-}
-
 .synth-card-image { width: 100%; display: block; }
 
 .synth-card-body {
-  padding: var(--space-3) var(--space-4) var(--space-4);
+  padding: var(--space-4) var(--space-6) var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
 }
 
 .synth-card-name {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: 600;
   color: var(--color-text);
   margin: 0;
 }
 
 .synth-card-desc {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   margin: 0;
   line-height: 1.5;
 }
 
 .synth-card-meta {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-family: var(--font-mono);
   color: var(--color-text-muted);
   margin-top: var(--space-1);

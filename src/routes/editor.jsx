@@ -21,7 +21,7 @@ export default function Editor() {
     <>
       <nav>
         <div className="nav-left">
-          <Link to="/" className="nav-home">SynthShare</Link>
+          <Link to="/" className="nav-home">patch</Link>
           <span className="nav-sep" aria-hidden="true" />
           <span className="nav-synth">{synth.name}</span>
         </div>

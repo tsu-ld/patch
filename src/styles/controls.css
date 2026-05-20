@@ -6,7 +6,7 @@ button {
   padding: var(--space-2) var(--space-4);
   font-size: var(--text-sm);
   cursor: pointer;
-  transition: background-color 15ms, border-color 15ms, color 15ms;
+  transition: background-color 150ms, border-color 150ms, color 150ms;
 }
 
 button:hover {
@@ -34,7 +34,7 @@ textarea {
   padding: var(--space-2) var(--space-3);
   font-size: var(--text-sm);
   width: 100%;
-  transition: border-color 15ms;
+  transition: border-color 150ms;
 }
 
 input[type='text']:focus-visible,
