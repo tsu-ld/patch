@@ -1,0 +1,86 @@
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: inset 0 0 0 1px var(--foreground-faint);
+  transition: box-shadow var(--dur-fast) var(--expo-out), transform var(--dur-enter) var(--expo-out);
+}
+
+.card:hover {
+  box-shadow: inset 0 0 0 1px var(--primary);
+  transform: translateY(-2px);
+}
+
+.thumb {
+  background: var(--panel-bg);
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb img { width: 100%; display: block }
+
+.open {
+  position: absolute;
+  top: var(--md);
+  right: var(--md);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--md);
+  color: var(--background);
+  background: var(--primary);
+  padding: 4px 8px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity var(--dur-fast) var(--expo-out), transform var(--dur-fast) var(--expo-out);
+}
+
+.card:hover .open { opacity: 1; transform: translateY(0) }
+
+.body {
+  padding: var(--xl) var(--3xl) var(--3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--md);
+}
+
+.name {
+  font-size: 24px;
+  line-height: 1;
+  color: var(--foreground);
+}
+
+.desc {
+  font-size: var(--lg);
+  line-height: 1.55;
+  color: var(--foreground-soft);
+}
+
+.meta {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--md);
+  color: var(--foreground-faint);
+  margin-top: 2px;
+}
+
+.soon { cursor: default }
+.soon .name,
+.soon .desc { color: var(--foreground-faint) }
+.soon:hover { box-shadow: inset 0 0 0 1px var(--foreground-faint); transform: none }
+
+.soonThumb {
+  aspect-ratio: 1209 / 843;
+  background: repeating-linear-gradient(135deg, var(--background-deep), var(--background-deep) 5px, transparent 5px, transparent 13px);
+  display: grid;
+  place-items: center;
+}
+
+.soonMark { font-size: 26px; color: var(--foreground-faint) }

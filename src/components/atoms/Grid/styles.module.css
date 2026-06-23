@@ -1,0 +1,13 @@
+:root { --grid-opacity: 0.06 }
+
+.grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--foreground) calc(var(--grid-opacity) * 100%), transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--foreground) calc(var(--grid-opacity) * 100%), transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}

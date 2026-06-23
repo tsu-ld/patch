@@ -1,0 +1,7 @@
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: var(--lg);
+  color: var(--foreground-soft);
+  margin-bottom: var(--3xl);
+}

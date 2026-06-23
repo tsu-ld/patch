@@ -1,0 +1,19 @@
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--md);
+  text-transform: uppercase;
+  font-size: var(--lg);
+  letter-spacing: 0.14em;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--background);
+  background: var(--foreground);
+  padding: 11px 18px;
+  box-shadow: inset 0 0 0 1px var(--foreground);
+  transition: background var(--dur-fast) var(--expo-out), color var(--dur-fast) var(--expo-out), box-shadow var(--dur-fast) var(--expo-out);
+}
+.cta:hover { background: var(--primary); box-shadow: inset 0 0 0 1px var(--primary); color: var(--background) }
+
+.arr { transition: transform var(--dur-fast) var(--expo-out) }
+.cta:hover .arr { transform: translateX(3px) }

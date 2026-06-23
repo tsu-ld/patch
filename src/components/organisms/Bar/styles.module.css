@@ -1,0 +1,46 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--3xl);
+  padding: var(--md) var(--4xl);
+  border-bottom: 1px solid var(--foreground-faint);
+  background: var(--background);
+  position: relative;
+  z-index: 50;
+}
+
+.barLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--xl);
+}
+
+.barSpacer { flex: 1 }
+
+.barTools {
+  display: flex;
+  gap: var(--md);
+  align-items: center;
+}
+
+.barHome {
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.barSep {
+  display: block;
+  width: 1px;
+  height: 15px;
+  background: var(--foreground-faint);
+}
+
+.barSynth {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--lg);
+  color: var(--foreground-soft);
+}

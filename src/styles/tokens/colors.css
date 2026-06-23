@@ -1,0 +1,13 @@
+:root {
+  --background:       oklch(0.9087 0.0231 84.6);
+  --background-deep:  oklch(0.8634 0.0292 84.6);
+  --foreground:       oklch(0.2035 0.0101 67.2);
+  --foreground-soft:  oklch(0.3231 0.0179 67.1);
+  --foreground-faint: oklch(0.2035 0.0101 67.2 / 0.42);
+  --primary-h: 230;
+  --primary: oklch(0.7 0.08 var(--primary-h));
+  --error:   oklch(0.7 0.08 25);
+  --warning: oklch(0.7 0.08 75);
+  --success: oklch(0.7 0.08 145);
+  --shadow:  oklch(0 0 0 / 0.2);
+}

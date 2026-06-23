@@ -1,0 +1,8 @@
+:root {
+  --dur-fast:  150ms;
+  --dur-enter: 420ms;
+  --expo-out:  cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-enter: 0ms; }
+}

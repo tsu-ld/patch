@@ -1,0 +1,39 @@
+.sliderVertical {
+  -webkit-appearance: none;
+  appearance: none;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  height: var(--slider-h, 119px);
+  width: 20px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+
+.sliderVertical::-moz-range-track {
+  width: 3px;
+  background: var(--foreground-faint);
+  border-radius: 1.5px;
+  border: 1.5px solid var(--foreground-faint);
+}
+
+.sliderVertical::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary) 45%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--primary) 45%, transparent);
+  cursor: pointer;
+}
+
+.sliderVertical::-moz-range-thumb:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
+@container panel (min-width: 0) {
+  .sliderVertical {
+    height: 9.7cqw;
+    width: 2cqw;
+  }
+}

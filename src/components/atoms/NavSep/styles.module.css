@@ -1,0 +1,6 @@
+.navSep {
+  display: block;
+  width: 1px;
+  height: 15px;
+  background: var(--foreground-faint);
+}

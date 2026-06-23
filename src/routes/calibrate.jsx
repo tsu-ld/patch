@@ -59,11 +59,11 @@ export default function Calibrate() {
   }
 
   const sizeInput = (label, key) => (
-    <label style={{ display: 'flex', gap: 4, alignItems: 'center', fontSize: 'var(--text-xs)' }}>
+    <label style={{ display: 'flex', gap: 4, alignItems: 'center', fontSize: 'var(--lg)' }}>
       {label}
       <input type="text" value={sizes[key]}
         onChange={e => setSizes(prev => ({ ...prev, [key]: Number(e.target.value) || 0 }))}
-        style={{ width: 44, padding: '2px 4px', fontSize: 'var(--text-xs)' }} />
+        style={{ width: 44, padding: '2px 4px', fontSize: 'var(--lg)' }} />
     </label>
   )
 
@@ -71,11 +71,11 @@ export default function Calibrate() {
     <>
       <nav>
         <h2>Calibrate: {synth.name}</h2>
-        <div style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'center' }}>
-          <label style={{ display: 'flex', gap: 4, alignItems: 'center', fontSize: 'var(--text-xs)' }}>
+        <div style={{ display: 'flex', gap: 'var(--xl)', alignItems: 'center' }}>
+          <label style={{ display: 'flex', gap: 4, alignItems: 'center', fontSize: 'var(--lg)' }}>
             Step %
             <input type="text" value={step} onChange={e => setStep(Number(e.target.value) || 0.1)}
-              style={{ width: 50, padding: '2px 4px', fontSize: 'var(--text-xs)' }} />
+              style={{ width: 50, padding: '2px 4px', fontSize: 'var(--lg)' }} />
           </label>
           {sizeInput('Knob', 'knob')}
           {sizeInput('Sw W', 'switchW')}
@@ -86,7 +86,7 @@ export default function Calibrate() {
         </div>
       </nav>
       <main style={{
-        padding: 'var(--space-6)',
+        padding: 'var(--6xl)',
         '--knob-size': `${sizes.knob}px`,
         '--switch-w': `${sizes.switchW}px`,
         '--switch-h': `${sizes.switchH}px`,
@@ -109,7 +109,7 @@ export default function Calibrate() {
                   cursor: 'pointer',
                   zIndex: selected === key ? 5 : 1,
                   outline: selected === key
-                    ? '2px solid var(--color-accent)'
+                    ? '2px solid var(--primary)'
                     : '2px solid transparent',
                   outlineOffset: 4,
                 }}
@@ -120,8 +120,8 @@ export default function Calibrate() {
                       width: 'var(--jack-size)',
                       height: 'var(--jack-size)',
                       borderRadius: '50%',
-                      border: '1.5px solid var(--color-border)',
-                      background: 'var(--color-surface)',
+                      border: '1.5px solid var(--foreground-faint)',
+                      background: 'var(--background)',
                     }}
                   />
                 ) : (
@@ -137,22 +137,21 @@ export default function Calibrate() {
         </div>
         <aside style={{
           position: 'fixed',
-          right: 'var(--space-4)',
-          top: 'var(--space-16)',
+          right: 'var(--4xl)',
+          top: 'var(--7xl)',
           width: 220,
-          background: 'var(--color-surface)',
-          border: '1px solid var(--color-border)',
-          borderRadius: 'var(--radius-md)',
-          padding: 'var(--space-3)',
-          maxHeight: 'calc(100vh - var(--space-24))',
+          background: 'var(--background)',
+          border: '1px solid var(--foreground-faint)',
+          padding: 'var(--xl)',
+          maxHeight: 'calc(100vh - 96px)',
           overflow: 'auto',
           zIndex: 20,
         }}>
           {selected ? (
             <>
-              <h4 style={{ marginBottom: 'var(--space-1)' }}>{synth.params[selected].label}</h4>
-              <code style={{ fontSize: 'var(--text-xs)' }}>{selected}</code>
-              <div style={{ marginTop: 'var(--space-3)', display: 'flex', gap: 'var(--space-2)' }}>
+              <h4 style={{ marginBottom: 'var(--xs)' }}>{synth.params[selected].label}</h4>
+              <code style={{ fontSize: 'var(--lg)' }}>{selected}</code>
+              <div style={{ marginTop: 'var(--xl)', display: 'flex', gap: 'var(--md)' }}>
                 <label>
                   X
                   <input type="text" value={coords[selected].x}
@@ -164,12 +163,12 @@ export default function Calibrate() {
                     onChange={e => setCoords(prev => ({ ...prev, [selected]: { ...prev[selected], y: Number(e.target.value) || 0 }}))} />
                 </label>
               </div>
-              <button onClick={copySelected} style={{ marginTop: 'var(--space-2)', width: '100%' }}>
+              <button onClick={copySelected} style={{ marginTop: 'var(--md)', width: '100%' }}>
                 Copy selected
               </button>
             </>
           ) : (
-            <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-muted)' }}>Click a control to select it. Arrow keys to move.</p>
+            <p style={{ fontSize: 'var(--lg)', color: 'var(--foreground-soft)' }}>Click a control to select it. Arrow keys to move.</p>
           )}
         </aside>
       </main>

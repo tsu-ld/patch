@@ -1,0 +1,21 @@
+.sectHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: var(--5xl) 0 var(--3xl);
+}
+
+.h {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--lg);
+  color: var(--foreground-soft);
+  margin: 0;
+}
+
+.count {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--md);
+  color: var(--foreground-faint);
+}

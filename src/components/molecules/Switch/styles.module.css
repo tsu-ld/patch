@@ -1,0 +1,31 @@
+.track {
+  width: 1.9cqw;
+  min-width: 13px;
+  height: 3.5cqw;
+  min-height: 24px;
+  background: var(--panel-knob);
+  box-shadow: inset 0 0 0 1px var(--panel-line);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.track:hover {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 70%, transparent);
+}
+
+.track:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--primary), 0 0 0 2px color-mix(in srgb, var(--primary) 55%, transparent);
+}
+
+.nub {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
+  height: 22%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: top var(--dur-fast) var(--expo-out);
+}

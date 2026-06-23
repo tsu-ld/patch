@@ -1,0 +1,12 @@
+body {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--xl);
+  letter-spacing: 0.02em;
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { color: var(--background); background: var(--foreground) }
+[title] { cursor: help }
+#root { display: flex; flex-direction: column }

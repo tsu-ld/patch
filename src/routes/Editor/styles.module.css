@@ -1,0 +1,42 @@
+.editorLayout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 296px;
+  gap: var(--4xl);
+  align-items: start;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--4xl);
+  position: relative;
+  z-index: 10;
+  min-height: 0;
+}
+
+.themeLoading {
+  visibility: hidden;
+}
+
+.decodeError {
+  text-align: center;
+  padding: var(--sm) var(--4xl);
+  font-size: var(--lg);
+  color: var(--foreground);
+  background: var(--error);
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 50;
+}
+
+@media (min-width: 1600px) {
+  .editorLayout {
+    grid-template-columns: 1fr 340px;
+    max-width: 1560px;
+  }
+}
+
+@media (max-width: 980px) {
+  .editorLayout {
+    grid-template-columns: 1fr;
+  }
+}

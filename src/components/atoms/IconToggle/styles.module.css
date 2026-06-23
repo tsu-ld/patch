@@ -1,0 +1,12 @@
+.iconToggle {
+  font-size: var(--md);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--foreground-soft);
+  box-shadow: inset 0 0 0 1px var(--foreground-faint);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+.iconToggle:hover { color: var(--foreground); box-shadow: inset 0 0 0 1px var(--foreground) }

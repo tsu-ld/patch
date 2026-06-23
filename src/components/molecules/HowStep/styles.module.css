@@ -1,0 +1,28 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+  padding: var(--5xl) var(--4xl);
+}
+
+.bordered {
+  border-left: 1px solid var(--foreground-faint);
+}
+
+.n {
+  letter-spacing: 0.14em;
+  font-size: var(--lg);
+  color: var(--primary);
+}
+
+.l {
+  font-size: 25px;
+  line-height: 1;
+  color: var(--foreground);
+}
+
+.d {
+  font-size: var(--lg);
+  line-height: 1.6;
+  color: var(--foreground-soft);
+}

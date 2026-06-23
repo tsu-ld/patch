@@ -1,0 +1,25 @@
+.presetName {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 2px var(--md);
+  width: auto;
+  box-shadow: none !important;
+  font-size: var(--lg);
+  color: var(--foreground-soft);
+}
+
+.presetName:hover {
+  border-bottom-color: var(--foreground-faint);
+}
+
+.presetName:focus {
+  outline: none;
+  border-bottom-color: var(--primary);
+  color: var(--foreground);
+}
+
+.presetName::placeholder {
+  color: var(--foreground-soft);
+  opacity: 0.5;
+}

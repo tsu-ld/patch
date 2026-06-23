@@ -3,22 +3,27 @@ import { RouterContext } from './context.js'
 
 const routes = import.meta.glob('../../routes/**/*.jsx', { eager: true })
 
+// ponytail: manual overrides for folder-based route files
+const ROUTE_OVERRIDES = {
+  '../../routes/Landing/index.jsx': '/',
+  '../../routes/Editor/index.jsx': '/editor',
+}
+
 function buildRouteMap() {
   const map = []
 
   for (const [filepath, mod] of Object.entries(routes)) {
-    let pattern = filepath
-      .replace('../../routes', '')
-      .replace(/\.jsx$/, '')
-      .replace(/\/index$/, '/')
-      .replace(/\[(\w+)\]/g, ':$1')
+    let pattern = ROUTE_OVERRIDES[filepath]
 
-    if (pattern === '')
-      pattern = '/'
-    if (!pattern.startsWith('/'))
-      pattern = `/${pattern}`
-    if (pattern !== '/' && pattern.endsWith('/'))
-      pattern = pattern.slice(0, -1)
+    if (!pattern) {
+      pattern = filepath
+        .replace('../../routes', '')
+        .replace(/\.jsx$/, '')
+        .replace(/\/index$/, '/')
+        .replace(/\[(\w+)\]/g, ':$1')
+
+      pattern = normalizePattern(pattern)
+    }
 
     const keys = []
     const regexStr = pattern
@@ -35,6 +40,17 @@ function buildRouteMap() {
   }
 
   return map
+}
+
+function normalizePattern(p) {
+  if (p === '')
+    return '/'
+  if (!p.startsWith('/'))
+    return `/${p}`
+  if (p !== '/' && p.endsWith('/'))
+    return p.slice(0, -1)
+
+  return p
 }
 
 function matchRoute(routeMap, path) {

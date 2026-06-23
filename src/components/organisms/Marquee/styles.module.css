@@ -1,0 +1,30 @@
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--foreground-faint);
+  border-bottom: 1px solid var(--foreground-faint);
+  padding: var(--md) 0;
+  margin-bottom: var(--5xl);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marq 34s linear infinite;
+}
+
+.track span {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--lg);
+  color: var(--foreground-faint);
+  white-space: nowrap;
+  padding-right: var(--md);
+}
+
+@keyframes marq {
+  to { transform: translateX(-50%) }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none }
+}

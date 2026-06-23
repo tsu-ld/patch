@@ -1,5 +1,5 @@
 import ControlRenderer from '@/components/ControlRenderer'
-import Tooltip from '@/components/Tooltip'
+import Tooltip from '@/components/molecules/Tooltip'
 
 export default function SynthControl({ paramKey, param, values, setValue }) {
   return (

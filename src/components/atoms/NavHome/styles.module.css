@@ -1,0 +1,10 @@
+.navHome {
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  text-decoration: none;
+}
+.navHome:hover {
+  color: var(--primary);
+}

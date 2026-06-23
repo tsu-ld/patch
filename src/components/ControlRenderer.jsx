@@ -1,6 +1,6 @@
-import Knob from '@/components/Knob'
-import Switch from '@/components/Switch'
-import './ControlRenderer.css'
+import Knob from '@/components/molecules/Knob'
+import Switch from '@/components/molecules/Switch'
+import styles from './ControlRenderer.module.css'
 
 export default function ControlRenderer({ param, value, onChange }) {
   if (param.type === 'knob') {
@@ -24,7 +24,7 @@ export default function ControlRenderer({ param, value, onChange }) {
   return (
     <input
       type="range"
-      className="slider-vertical"
+      className={styles.sliderVertical}
       min={param.min}
       max={param.max}
       step="0.01"

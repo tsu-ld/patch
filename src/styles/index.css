@@ -1,11 +1,6 @@
-@import '@fontsource-variable/fraunces';
-@import './tsu/colors.css';
-@import './tsu/typography.css';
-@import './tsu/spacing.css';
-@import './tsu/effects.css';
-@import './tsu/base.css';
+@import './tokens/colors.css';
+@import './tokens/spacing.css';
+@import './tokens/motion.css';
 @import './reset.css';
-@import './config.css';
-@import './typography.css';
-@import './layout.css';
-@import './controls.css';
+@import './base.css';
+@import './elements.css';

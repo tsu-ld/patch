@@ -1,0 +1,7 @@
+.landingWrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--4xl) var(--4xl);
+  position: relative;
+  z-index: 10;
+}

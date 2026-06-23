@@ -1,0 +1,15 @@
+:root { --grain-opacity: 0.55 }
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  isolation: isolate;
+  mix-blend-mode: multiply;
+  opacity: var(--grain-opacity);
+  background: var(--foreground);
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.3 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mask-size: 240px 240px;
+  mask-repeat: repeat;
+}

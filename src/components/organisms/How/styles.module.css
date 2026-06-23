@@ -1,0 +1,15 @@
+.how {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 0;
+  border-top: 1px solid var(--foreground-faint);
+  border-bottom: 1px solid var(--foreground-faint);
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .how {
+    grid-template-columns: 1fr;
+  }
+}

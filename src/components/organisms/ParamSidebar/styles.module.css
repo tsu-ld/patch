@@ -1,0 +1,60 @@
+.sidebar {
+  box-shadow: inset 0 0 0 1px var(--foreground-faint);
+  padding: var(--3xl) var(--3xl) var(--md);
+  position: sticky;
+  top: var(--4xl);
+  align-self: start;
+  max-height: calc(100vh - 56px - var(--7xl));
+  overflow-y: auto;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--3xl);
+}
+
+.section {}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: var(--sm);
+  margin-bottom: var(--md);
+  border-bottom: 1px solid var(--foreground-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--lg);
+  color: var(--foreground-soft);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--xl);
+  padding: 3px 0;
+}
+
+.label {
+  font-size: var(--lg);
+  color: var(--foreground-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.value {
+  font-size: var(--lg);
+  color: var(--foreground-faint);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.modified .label {
+  color: var(--foreground);
+}
+
+.modified .value {
+  color: var(--primary);
+}
