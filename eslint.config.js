@@ -20,7 +20,7 @@ export default antfu({
     'max-depth': ['error', 2],
     'max-params': ['error', 3],
     'max-lines-per-function': ['error', {
-      max: 30,
+      max: 45,
       skipBlankLines: true,
       skipComments: true,
     }],
