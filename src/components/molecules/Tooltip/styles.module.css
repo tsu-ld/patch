@@ -1,12 +1,8 @@
 .wrapper {
-  position: relative;
+  display: inline-block;
 }
 
 .text {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
   width: 168px;
   padding: 7px 9px;
   background: var(--background);
@@ -15,15 +11,7 @@
   font-size: var(--lg);
   line-height: 1.5;
   text-transform: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--dur-fast) var(--expo-out);
-  z-index: 60;
+  transform: translateX(-50%);
+  z-index: 9999;
   pointer-events: none;
-}
-
-.wrapper:hover .text,
-.wrapper:focus-within .text {
-  opacity: 1;
-  visibility: visible;
 }
