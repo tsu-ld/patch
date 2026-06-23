@@ -1,0 +1,21 @@
+:root {
+  --grain-opacity: 0.55;
+  --grid-opacity: 0.06;
+  --expo-out: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --dur-enter: 420ms;
+  --dur-exit: 300ms;
+  --dur-fast: 150ms;
+  --stagger-enter: 22ms;
+  --stagger-exit: 12ms;
+  --shadow-drop: 0 8px 24px var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-enter: 0ms;
+    --dur-exit: 0ms;
+    --dur-fast: 0ms;
+  }
+}

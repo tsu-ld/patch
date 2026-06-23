@@ -1,0 +1,14 @@
+/* ============================================================
+   tsu · fonts
+   Variable fonts loaded via @fontsource-variable npm packages:
+   - Fraunces (serif display, w/ SOFT axis for expressive control)
+   - JetBrains Mono (UI / metadata)
+   ============================================================ */
+
+/* Fraunces is imported in the app entry via:
+   import '@fontsource-variable/fraunces';
+   This registers font-family: "Fraunces Variable".
+
+   JetBrains Mono would be added similarly via @fontsource-variable/jetbrains-mono
+   or self-hosted as a woff2.
+*/

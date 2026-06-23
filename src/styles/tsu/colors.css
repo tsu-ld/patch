@@ -1,0 +1,28 @@
+:root {
+  --background: oklch(0.9087 0.0231 84.6);
+  --background-deep: oklch(0.8634 0.0292 84.6);
+  --foreground: oklch(0.2035 0.0101 67.2);
+  --foreground-soft: oklch(0.3231 0.0179 67.1);
+  --foreground-faint: oklch(0.2035 0.0101 67.2 / 0.42);
+  --primary: oklch(0.55 0.13 255);
+  --on-primary: oklch(0.9087 0.0231 84.6);
+  --error: oklch(0.577 0.245 27.3);
+  --shadow: oklch(0 0 0 / 0.2);
+  --surface: var(--background);
+  --surface-deep: var(--background-deep);
+  --text: var(--foreground);
+  --text-muted: var(--foreground-soft);
+  --text-faint: var(--foreground-faint);
+  --border: var(--foreground-faint);
+  --border-strong: var(--foreground);
+  --accent: var(--primary);
+}
+
+html.dark {
+  --background: oklch(0.17 0.015 84.6);
+  --background-deep: oklch(0.22 0.02 84.6);
+  --foreground: oklch(0.88 0.025 84.6);
+  --foreground-soft: oklch(0.72 0.03 84.6);
+  --foreground-faint: oklch(0.88 0.025 84.6 / 0.42);
+  --on-primary: oklch(0.17 0.015 84.6);
+}

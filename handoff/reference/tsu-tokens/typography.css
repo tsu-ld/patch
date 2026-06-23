@@ -1,0 +1,48 @@
+/* ============================================================
+   tsu · typography
+   Display = Fraunces (variable w/ SOFT expressive axis).
+   Body / UI = JetBrains Mono. Uppercase UI gets wide tracking.
+   Tokens below capture the role-based type scale from the site.
+   ============================================================ */
+
+:root {
+  /* font families */
+  --font-display: "Fraunces Variable", "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* fluid display sizes */
+  --type-display-xxl: clamp(60px, min(17vw, 30vh), 280px); /* hero name */
+  --type-display-xl: clamp(34px, 4.5vw, 58px);             /* section headings */
+  --type-headline-lg: clamp(24px, 8vw, 58px);              /* reader title */
+  --type-headline-md: clamp(16px, 5vw, 28px);              /* project key name */
+  --type-headline-sm: clamp(25px, min(2.5vw, 5vh), 45px);  /* bio text */
+
+  /* fixed mono sizes */
+  --type-body-md: 12px;
+  --type-body-sm: 10.5px;
+  --type-body-xs: 9.5px;
+  --type-label-md: 11px;
+  --type-label-sm: 10px;
+  --type-label-xs: 8px;
+
+  /* SOFT axis presets (font-variation-settings) — Fraunces SOFT 0-100
+     0 = sharp/crisp, 100 = max softness/roundness */
+  --soft-max: "SOFT" 100;
+  --soft-high: "SOFT" 67;   /* hero name */
+  --soft-xl: "SOFT" 60;     /* section headings */
+  --soft-lg: "SOFT" 50;     /* balanced display */
+  --soft-md: "SOFT" 40;     /* taglines */
+  --soft-sm: "SOFT" 33;     /* secondary */
+  --soft-flat: "SOFT" 0;    /* sharp / crisp */
+
+  /* tracking */
+  --track-tight: -0.025em;
+  --track-body: 0.02em;
+  --track-ui: 0.14em;
+  --track-ui-wide: 0.2em;
+
+  /* line heights */
+  --leading-display: 0.82;
+  --leading-tight: 0.9;
+  --leading-body: 1.5;
+}
