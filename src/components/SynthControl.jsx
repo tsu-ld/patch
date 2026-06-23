@@ -9,15 +9,16 @@ export default function SynthControl({ paramKey, param, values, setValue }) {
         position: 'absolute',
         left: `${param.x}%`,
         top: `${param.y}%`,
-        transform: 'translate(-50%, -50%)',
       }}
     >
       <Tooltip text={param.description}>
-        <ControlRenderer
-          param={param}
-          value={values[paramKey]}
-          onChange={v => setValue(paramKey, v)}
-        />
+        <div style={{ transform: 'translate(-50%, -50%)' }}>
+          <ControlRenderer
+            param={param}
+            value={values[paramKey]}
+            onChange={v => setValue(paramKey, v)}
+          />
+        </div>
       </Tooltip>
     </div>
   )
