@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "postinstall": "node scripts/patch-eslint-scope.mjs"
   },
   "dependencies": {
     "react": "^19",
