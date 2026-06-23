@@ -1,65 +1,60 @@
 button {
-  background: var(--color-surface);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--track-ui);
+  font-size: var(--type-label-sm);
+  font-weight: 500;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--border);
+  border-radius: 0;
+  padding: 7px 13px;
   cursor: pointer;
-  transition: background-color 150ms, border-color 150ms, color 150ms;
+  transition: color var(--dur-fast) var(--expo-out),
+              background var(--dur-fast) var(--expo-out),
+              box-shadow var(--dur-fast) var(--expo-out),
+              transform var(--dur-fast) var(--expo-out);
 }
+button:hover:not(:disabled) { color: var(--background); background: var(--foreground); box-shadow: inset 0 0 0 1px var(--foreground); }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: 0.38; cursor: default; }
 
-button:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  background: var(--color-surface-2);
+button.primary { box-shadow: inset 0 0 0 1px var(--primary); color: var(--primary); }
+button.primary:hover { color: var(--background); background: var(--primary); box-shadow: inset 0 0 0 1px var(--primary); }
+button.ok { color: var(--background); background: var(--foreground); box-shadow: inset 0 0 0 1px var(--foreground); }
+
+input[type="text"], input[type="search"], textarea, select {
+  font-family: var(--font-mono);
+  font-size: var(--type-label-md);
+  letter-spacing: 0.04em;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--border);
+  border-radius: 0;
+  padding: 7px 12px;
 }
-
-button:active {
-  opacity: 0.8;
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1.5px var(--primary);
 }
+::placeholder { color: var(--text-faint); }
 
-button:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 1px;
-}
-
-input[type='text'],
-input[type='search'],
-textarea {
-  background: var(--color-surface);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--text-sm);
-  width: 100%;
-  transition: border-color 150ms;
-}
-
-input[type='text']:focus-visible,
-input[type='search']:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 1px;
-}
-
-input[type='range'] {
-  accent-color: var(--color-accent);
+.icon-toggle {
+  font-family: var(--font-mono);
+  font-size: var(--type-label-xs);
+  letter-spacing: var(--track-ui);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--border);
+  width: 30px;
+  height: 30px;
   cursor: pointer;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
 }
-
-select {
-  background: var(--color-surface);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--text-sm);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: var(--color-text-muted);
-  opacity: 0.6;
-}
+.icon-toggle:hover { color: var(--text); box-shadow: inset 0 0 0 1px var(--text); }

@@ -9,6 +9,10 @@ export default function Panel({ synth, values, setValue }) {
 
   return (
     <div className="panel-container">
+      <div className="panel-caption">
+        <span className="pc-name">{synth.id}</span>
+        <span className="pc-meta">analog · monophonic</span>
+      </div>
       <div className="panel-inner">
         <img className="panel-image" src={synth.panel} alt={synth.name} />
         {controlEntries.map(([key, param]) => (
@@ -20,7 +24,6 @@ export default function Panel({ synth, values, setValue }) {
             setValue={setValue}
           />
         ))}
-        {/* TODO: This is wrong, not every synth will have a modMatrix, rename microbrute's modMatrix to patchBay or something like that */}
         {synth.modMatrixColumns && (
           <PatchBay
             params={synth.params}

@@ -1,5 +1,9 @@
-@import '@fontsource-variable/geist';
-@import '@fontsource-variable/geist-mono';
+@import '@fontsource-variable/fraunces';
+@import './tsu/colors.css';
+@import './tsu/typography.css';
+@import './tsu/spacing.css';
+@import './tsu/effects.css';
+@import './tsu/base.css';
 @import './reset.css';
 @import './config.css';
 @import './typography.css';

@@ -19,14 +19,15 @@ export default function Editor() {
 
   return (
     <>
-      <nav>
+      <nav className="bar">
         <div className="nav-left">
           <Link to="/" className="nav-home">patch</Link>
           <span className="nav-sep" aria-hidden="true" />
           <span className="nav-synth">{synth.name}</span>
         </div>
+        <div className="nav-spacer" />
         <PresetName name={name} onChange={setPresetName} />
-        <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
+        <div className="nav-tools">
           <button onClick={undoPreset} disabled={!hasUndo}>Undo</button>
           <button onClick={handleReset}>Reset</button>
           <ShareButton shareUrl={shareUrl} />

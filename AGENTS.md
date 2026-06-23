@@ -26,7 +26,7 @@ index.html → App.jsx → Router (providers/router/index.jsx)
 
 - **Routes** live in `src/routes/`. Add a `.jsx` file there, it becomes a route automatically. Dynamic segments: `[id].jsx` → `/:id`.
 - **Router** uses `history.pushState` and listens to `popstate`. Navigation via `<Link>` component or `useRouter()` hook. Route matching is regex-based and ignores query strings.
-- **Synth definitions** live in `src/synths/<name>/index.js` as data objects (not components). Each has `id`, `name`, `panel` (image path), and a `params` map of knobs/switches/sliders/jacks with `x`/`y` positions and `default` values. Register new synths in `src/synths/index.js`.
+- **  definitions** live in `src/synths/<name>/index.js` as data objects (not components). Each has `id`, `name`, `panel` (image path), and a `params` map of knobs/switches/sliders/jacks with `x`/`y` positions and `default` values. Register new synths in `src/synths/index.js`.
 - **Synth themes** go in `src/synths/<name>/theme.css` and are applied via `[data-theme='<id>']` on `<body>`. Theme CSS loads dynamically; the editor layout is hidden until the CSS resolves, preventing a flash of unthemed UI.
 - **No backend.** All preset data is encoded in the URL query string (`?synth=...&preset=<base64 JSON>`). The `useSynthPreset` hook reads/writes the URL.
 - **Components** dispatch on `param.type` in `ControlRenderer.jsx`: `'knob'` → Knob, `'switch'` → Switch, `'jack'` → null (rendered separately by PatchBay), anything else → native range input.

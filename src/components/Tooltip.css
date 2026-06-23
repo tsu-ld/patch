@@ -1,45 +1,30 @@
 .tooltip-wrapper {
-    position: relative;
-}
-
-.tooltip-wrapper:hover .tooltip-text {
-    display: block;
+  position: relative;
 }
 
 .tooltip-text {
-    display: none;
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--color-surface);
-    color: var(--color-text);
-    padding: 4px 8px;
-    border-radius: var(--radius-sm);
-    font-size: var(--text-xs);
-    white-space: nowrap;
-    z-index: 100;
-    border: 1px solid var(--color-border);
-    pointer-events: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 168px;
+  padding: 7px 9px;
+  background: var(--background);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px var(--border);
+  font-family: var(--font-mono);
+  font-size: var(--type-label-sm);
+  line-height: 1.5;
+  text-transform: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-fast) var(--expo-out);
+  z-index: 60;
+  pointer-events: none;
 }
 
-.tooltip-text::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 4px solid transparent;
-    border-top-color: var(--color-surface);
-    z-index: 2;
-}
-
-.tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid transparent;
-    border-top-color: var(--color-border);
+.tooltip-wrapper:hover .tooltip-text,
+.tooltip-wrapper:focus-within .tooltip-text {
+  opacity: 1;
+  visibility: visible;
 }

@@ -5,23 +5,23 @@ input.preset-name {
   border-radius: 0;
   padding: var(--space-2) var(--space-2);
   width: auto;
-  color: var(--color-text-muted);
-  font-size: var(--text-sm);
-  font-family: var(--font-sans);
-  transition: border-color 150ms, color 150ms;
+  box-shadow: none !important;
+  font-size: var(--type-label-md);
+  font-family: var(--font-mono);
+  color: var(--text-muted);
 }
 
 input.preset-name:hover {
-  border-bottom-color: var(--color-border);
+  border-bottom-color: var(--border);
 }
 
 input.preset-name:focus {
   outline: none;
-  border-bottom-color: var(--color-accent);
-  color: var(--color-text);
+  border-bottom-color: var(--primary);
+  color: var(--text);
 }
 
 input.preset-name::placeholder {
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   opacity: 0.5;
 }

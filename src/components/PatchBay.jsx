@@ -30,24 +30,11 @@ function cableKey(srcKey, dstKey) {
 
 function CableLines({ cables }) {
   return cables.map(c => (
-    <g key={cableKey(c[2], c[3])}>
-      <path
-        d={cablePath(c[0], c[1])}
-        fill="none"
-        stroke="var(--color-accent)"
-        strokeWidth="0.6"
-        strokeLinecap="round"
-      />
-      <path
-        d={cablePath(c[0], c[1])}
-        fill="none"
-        stroke="var(--color-accent)"
-        strokeWidth="0.3"
-        strokeLinecap="round"
-        opacity="0.3"
-        style={{ filter: 'blur(3px)' }}
-      />
-    </g>
+    <path
+      key={cableKey(c[2], c[3])}
+      d={cablePath(c[0], c[1])}
+      className="cable-path"
+    />
   ))
 }
 
@@ -58,12 +45,7 @@ function PreviewCable({ from, preview }) {
   return (
     <path
       d={cablePath(from, preview)}
-      fill="none"
-      stroke="var(--color-accent)"
-      strokeWidth="0.4"
-      strokeLinecap="round"
-      strokeDasharray="1.5 1.5"
-      opacity="0.6"
+      className="cable-path cable-path--preview"
     />
   )
 }
